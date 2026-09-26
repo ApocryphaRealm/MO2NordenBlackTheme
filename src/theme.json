@@ -1,0 +1,12 @@
+{
+  "title": "Norden - Black",
+  "art": "norden",
+  "shape": "norden",
+  "bg": "#000000",
+  "frame": "#BBBDBF",
+  "border": "#8E9396",
+  "text": "#E5E5E5",
+  "dim": "#999999",
+  "accent": "#BBBDBF",
+  "separator": "#1E1F20"
+}

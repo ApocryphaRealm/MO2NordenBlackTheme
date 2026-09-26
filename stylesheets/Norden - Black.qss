@@ -1,0 +1,389 @@
+/* Norden - Black - a Mod Organizer 2 theme, version 1.0.0. BUILT by tools\build_themes.py from src\theme.qss.in and the
+   theme's palette; edit those, not this file. Colours are the Apocrypha Menu Framework "Norden - Black" theme's: background
+   #000000, frame #bbbdbf, lines #8e9396, text #e5e5e5, secondary text #999999, accent #bbbdbf, with AMF's own graded tints
+   (lines at 55% for separators, 28% for hover, 14% for subtle fills; accent at 22% for selection, 42% when hovered). */
+
+/* ---- Base ---- */
+* {
+  outline: none; }
+QWidget {
+  background-color: #000000;
+  color: #e5e5e5;
+  selection-background-color: rgba(187, 189, 191, 0.42);
+  selection-color: #e5e5e5; }
+QWidget:disabled {
+  color: #999999; }
+QMainWindow, QDialog {
+  background-color: #000000;
+  background-image: url("./Norden - Black/art/background.png"); }
+QMainWindow::separator {
+  background-color: rgba(142, 147, 150, 0.14);
+  width: 4px;
+  height: 4px; }
+QToolTip {
+  background-color: #000000;
+  color: #e5e5e5;
+  border: 1px solid #8e9396;
+  padding: 4px; }
+QLabel, QCheckBox, QRadioButton {
+  background-color: transparent; }
+LinkLabel {
+  qproperty-linkColor: #bbbdbf; }
+QSplitter::handle {
+  background-color: transparent; }
+QSplitter::handle:hover {
+  background-color: rgba(142, 147, 150, 0.28); }
+
+/* ---- Frames: the theme's own frame art where it has one ---- */
+QGroupBox {
+  border-image: url("./Norden - Black/art/frame.png") 26 26 26 26 stretch; border-width: 26px;
+  margin-top: 1.4em;
+  padding-top: 6px; }
+QGroupBox::title {
+  subcontrol-origin: margin;
+  subcontrol-position: top left;
+  left: 10px;
+  padding: 0 4px;
+  color: #e5e5e5; }
+QTabWidget::pane {
+  border-image: url("./Norden - Black/art/frame.png") 26 26 26 26 stretch; border-width: 26px;
+  top: -1px; }
+QFrame[frameShape="4"], QFrame[frameShape="5"] {
+  color: rgba(142, 147, 150, 0.55); }
+
+/* ---- Menus and the toolbar ---- */
+QMenuBar {
+  background-color: #000000;
+  border-bottom: 1px solid rgba(142, 147, 150, 0.55); }
+QMenuBar::item {
+  background: transparent;
+  padding: 4px 10px; }
+QMenuBar::item:selected {
+  background-color: rgba(142, 147, 150, 0.28); }
+QMenu {
+  background-color: #000000;
+  border: 1px solid #8e9396;
+  padding: 4px 0; }
+QMenu::item {
+  padding: 5px 24px 5px 24px;
+  background: transparent; }
+QMenu::item:selected {
+  background-color: rgba(187, 189, 191, 0.42);
+  color: #e5e5e5; }
+QMenu::item:disabled {
+  color: #999999; }
+QMenu::separator {
+  height: 1px;
+  background-color: rgba(142, 147, 150, 0.55);
+  margin: 4px 8px; }
+QToolBar {
+  background-color: #000000;
+  border: none;
+  border-bottom: 1px solid rgba(142, 147, 150, 0.55);
+  spacing: 4px;
+  padding: 2px; }
+QToolBar::separator {
+  background-color: rgba(142, 147, 150, 0.55);
+  width: 1px;
+  margin: 6px 4px; }
+QToolButton {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 3px; }
+QToolButton:hover, QToolButton:focus {
+  background-color: rgba(142, 147, 150, 0.28);
+  border: 1px solid rgba(142, 147, 150, 0.55); }
+QToolButton:pressed, QToolButton:checked {
+  background-color: rgba(187, 189, 191, 0.22);
+  border: 1px solid #8e9396; }
+QToolButton::menu-indicator {
+  image: url("./Norden - Black/art/arrow-down.svg");
+  width: 8px;
+  height: 8px;
+  subcontrol-position: bottom right;
+  subcontrol-origin: padding; }
+QToolButton::menu-button {
+  border: none;
+  width: 12px; }
+
+/* ---- Buttons: the theme's plate shape ---- */
+QPushButton {
+  border-image: url("./Norden - Black/art/button.svg") 8 8 8 8 stretch;
+  border-width: 8px;
+  padding: -4px 6px;
+  min-height: 14px;
+  min-width: 48px;
+  color: #e5e5e5; }
+QPushButton:hover, QPushButton:focus {
+  border-image: url("./Norden - Black/art/button-hover.svg") 8 8 8 8 stretch; }
+QPushButton:pressed, QPushButton:checked {
+  border-image: url("./Norden - Black/art/button-pressed.svg") 8 8 8 8 stretch; }
+QPushButton:disabled {
+  border-image: url("./Norden - Black/art/button-disabled.svg") 8 8 8 8 stretch;
+  color: #999999; }
+QPushButton::menu-indicator {
+  image: url("./Norden - Black/art/arrow-down.svg");
+  width: 8px;
+  height: 8px;
+  subcontrol-position: right center;
+  subcontrol-origin: padding;
+  right: 2px; }
+QDialogButtonBox QPushButton {
+  min-width: 72px; }
+
+/* ---- Inputs ---- */
+QLineEdit, QTextEdit, QPlainTextEdit, QAbstractSpinBox {
+  background-color: #0a0a0b;
+  border: 1px solid rgba(142, 147, 150, 0.55);
+  padding: 3px;
+  selection-background-color: rgba(187, 189, 191, 0.42); }
+QLineEdit:hover, QTextEdit:hover, QPlainTextEdit:hover, QAbstractSpinBox:hover {
+  border: 1px solid #8e9396; }
+QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus, QAbstractSpinBox:focus {
+  border: 1px solid #8e9396;
+  background-color: #121314; }
+QLineEdit[valid-filter=false] {
+  background-color: #4e1719; }
+QAbstractSpinBox::up-button, QAbstractSpinBox::down-button {
+  background: transparent;
+  border: none;
+  width: 14px; }
+QAbstractSpinBox::up-arrow {
+  image: url("./Norden - Black/art/arrow-up.svg");
+  width: 8px;
+  height: 8px; }
+QAbstractSpinBox::down-arrow {
+  image: url("./Norden - Black/art/arrow-down.svg");
+  width: 8px;
+  height: 8px; }
+QComboBox {
+  background-color: #0a0a0b;
+  border: 1px solid rgba(142, 147, 150, 0.55);
+  padding: 3px 22px 3px 6px;
+  min-height: 18px; }
+QComboBox:hover, QComboBox:on {
+  border: 1px solid #8e9396; }
+QComboBox::drop-down {
+  border: none;
+  width: 20px;
+  subcontrol-origin: padding;
+  subcontrol-position: top right; }
+QComboBox::down-arrow {
+  image: url("./Norden - Black/art/arrow-down.svg");
+  width: 10px;
+  height: 10px; }
+QComboBox QAbstractItemView {
+  background-color: #000000;
+  border: 1px solid #8e9396;
+  selection-background-color: rgba(187, 189, 191, 0.42);
+  outline: none; }
+
+/* ---- Check boxes and radio buttons, in the list views too ---- */
+QCheckBox, QRadioButton {
+  spacing: 6px; }
+QCheckBox::indicator, QTreeView::indicator, QListView::indicator, QTableView::indicator, QGroupBox::indicator {
+  width: 14px;
+  height: 14px; }
+QCheckBox::indicator:unchecked, QTreeView::indicator:unchecked, QListView::indicator:unchecked, QTableView::indicator:unchecked, QGroupBox::indicator:unchecked {
+  image: url("./Norden - Black/art/check-off.svg"); }
+QCheckBox::indicator:unchecked:hover, QTreeView::indicator:unchecked:hover, QListView::indicator:unchecked:hover, QGroupBox::indicator:unchecked:hover {
+  image: url("./Norden - Black/art/check-off-hover.svg"); }
+QCheckBox::indicator:checked, QTreeView::indicator:checked, QListView::indicator:checked, QTableView::indicator:checked, QGroupBox::indicator:checked {
+  image: url("./Norden - Black/art/check-on.svg"); }
+QCheckBox::indicator:indeterminate, QTreeView::indicator:indeterminate {
+  image: url("./Norden - Black/art/check-part.svg"); }
+QCheckBox::indicator:disabled, QTreeView::indicator:disabled {
+  image: url("./Norden - Black/art/check-disabled.svg"); }
+QRadioButton::indicator {
+  width: 14px;
+  height: 14px; }
+QRadioButton::indicator:unchecked {
+  image: url("./Norden - Black/art/radio-off.svg"); }
+QRadioButton::indicator:unchecked:hover {
+  image: url("./Norden - Black/art/radio-off-hover.svg"); }
+QRadioButton::indicator:checked {
+  image: url("./Norden - Black/art/radio-on.svg"); }
+
+/* ---- Lists, trees and tables ---- */
+QAbstractItemView {
+  background-color: #000000;
+  alternate-background-color: #000000;
+  border: 1px solid rgba(142, 147, 150, 0.55);
+  selection-background-color: rgba(187, 189, 191, 0.42);
+  selection-color: #e5e5e5; }
+QAbstractItemView[filtered=true] {
+  border: 1px solid #bbbdbf; }
+QAbstractItemView::item:hover {
+  background-color: rgba(142, 147, 150, 0.28); }
+QAbstractItemView::item:selected {
+  background-color: rgba(187, 189, 191, 0.42);
+  color: #e5e5e5; }
+QTreeView::branch {
+  background: transparent; }
+QTreeView::branch:has-children:!has-siblings:closed, QTreeView::branch:closed:has-children:has-siblings {
+  image: url("./Norden - Black/art/arrow-right.svg"); }
+QTreeView::branch:open:has-children:!has-siblings, QTreeView::branch:open:has-children:has-siblings {
+  image: url("./Norden - Black/art/arrow-down.svg"); }
+QHeaderView {
+  background-color: #000000;
+  border: none; }
+QHeaderView::section {
+  background-color: #000000;
+  color: #999999;
+  border: none;
+  border-right: 1px solid rgba(142, 147, 150, 0.14);
+  border-bottom: 1px solid rgba(142, 147, 150, 0.55);
+  padding: 4px 4px; }
+QHeaderView::section:hover {
+  background-color: rgba(142, 147, 150, 0.28);
+  color: #e5e5e5; }
+QHeaderView::up-arrow {
+  image: url("./Norden - Black/art/arrow-up.svg");
+  width: 8px;
+  height: 8px; }
+QHeaderView::down-arrow {
+  image: url("./Norden - Black/art/arrow-down.svg");
+  width: 8px;
+  height: 8px; }
+QTableView QTableCornerButton::section {
+  background-color: #000000;
+  border: none; }
+
+/* ---- The mod list: separators and mods coloured separately. With collapsible separators MO2's list is a tree whose
+   parent rows are the separators, so ::item:has-children is a separator and nothing else; mods are the view's own
+   background, and no ::item rule touches a mod row, so MO2's conflict highlight stays visible. ---- */
+QTreeView#modList {
+  background-color: #000000;
+  alternate-background-color: #000000; }
+QTreeView#modList::item:has-children {
+  background-color: #1e1f20;
+  color: #e5e5e5; }
+QTreeView#modList::item:has-children:hover {
+  background-color: rgba(142, 147, 150, 0.28); }
+QTreeView#modList::item:has-children:selected {
+  background-color: rgba(187, 189, 191, 0.42); }
+
+/* ---- Tabs ---- */
+QTabBar {
+  background: transparent; }
+QTabBar::tab {
+  background-color: transparent;
+  color: #999999;
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgba(142, 147, 150, 0.55);
+  padding: 5px 12px;
+  margin-right: 2px; }
+QTabBar::tab:hover {
+  color: #e5e5e5;
+  background-color: rgba(142, 147, 150, 0.28); }
+QTabBar::tab:selected {
+  color: #e5e5e5;
+  background-color: rgba(187, 189, 191, 0.22);
+  border: 1px solid #8e9396;
+  border-bottom: 1px solid #bbbdbf; }
+QTabBar::tab:disabled {
+  color: rgba(142, 147, 150, 0.55); }
+QTabBar QToolButton {
+  background-color: #000000;
+  border: 1px solid rgba(142, 147, 150, 0.55); }
+QTabBar QToolButton::left-arrow {
+  image: url("./Norden - Black/art/arrow-left.svg"); }
+QTabBar QToolButton::right-arrow {
+  image: url("./Norden - Black/art/arrow-right.svg"); }
+
+/* ---- Scrollbars ---- */
+QScrollBar:vertical {
+  background-color: #000000;
+  width: 12px;
+  margin: 0; }
+QScrollBar:horizontal {
+  background-color: #000000;
+  height: 12px;
+  margin: 0; }
+QScrollBar::handle:vertical {
+  background-color: rgba(142, 147, 150, 0.55);
+  min-height: 24px;
+  margin: 2px 3px; }
+QScrollBar::handle:horizontal {
+  background-color: rgba(142, 147, 150, 0.55);
+  min-width: 24px;
+  margin: 3px 2px; }
+QScrollBar::handle:hover {
+  background-color: #8e9396; }
+QScrollBar::add-line, QScrollBar::sub-line {
+  width: 0;
+  height: 0;
+  border: none;
+  background: none; }
+QScrollBar::add-page, QScrollBar::sub-page {
+  background: none; }
+QAbstractScrollArea::corner {
+  background-color: #000000; }
+
+/* ---- Progress, sliders, the rest ---- */
+QProgressBar {
+  background-color: #0a0a0b;
+  border: 1px solid rgba(142, 147, 150, 0.55);
+  text-align: center;
+  color: #e5e5e5; }
+QProgressBar::chunk {
+  background-color: rgba(187, 189, 191, 0.7); }
+QSlider::groove:horizontal {
+  height: 2px;
+  background-color: rgba(142, 147, 150, 0.55); }
+QSlider::handle:horizontal {
+  background-color: #bbbdbf;
+  border: 1px solid #8e9396;
+  width: 10px;
+  margin: -6px 0; }
+QStatusBar {
+  background-color: #000000;
+  border-top: 1px solid rgba(142, 147, 150, 0.55); }
+QStatusBar::item {
+  border: none; }
+QDockWidget::title {
+  background-color: #000000;
+  border-bottom: 1px solid rgba(142, 147, 150, 0.55);
+  padding: 4px; }
+QLCDNumber {
+  background-color: #0a0a0b;
+  border: 1px solid rgba(142, 147, 150, 0.55);
+  color: #e5e5e5; }
+SaveGameInfoWidget {
+  background-color: #000000;
+  border: 1px solid #8e9396;
+  color: #e5e5e5; }
+
+/* ---- Icons: Njordlinger's set in every theme (the owner, 2026-09-26: "i like the icons in njordlinger so keep all of them
+   for every theme"). MO2 copies qproperty-icon from dummy buttons named after its toolbar actions onto the actions
+   (src/mainwindow.cpp, v2.5.2); the other names are MO2's own buttons. ---- */
+#actionChange_Game { qproperty-icon: url("./Norden - Black/icons/actionChange_Game.png"); }
+#actionInstallMod { qproperty-icon: url("./Norden - Black/icons/actionInstallMod.png"); }
+#actionNexus { qproperty-icon: url("./Norden - Black/icons/actionNexus.png"); }
+#actionModPage { qproperty-icon: url("./Norden - Black/icons/actionModPage.png"); }
+#actionAdd_Profile { qproperty-icon: url("./Norden - Black/icons/actionAdd_Profile.png"); }
+#action_Refresh { qproperty-icon: url("./Norden - Black/icons/action_Refresh.png"); }
+#actionModify_Executables { qproperty-icon: url("./Norden - Black/icons/actionModify_Executables.png"); }
+#actionTool { qproperty-icon: url("./Norden - Black/icons/actionTool.png"); }
+#actionSettings { qproperty-icon: url("./Norden - Black/icons/actionSettings.png"); }
+#actionEndorseMO { qproperty-icon: url("./Norden - Black/icons/actionEndorseMO.png"); }
+#actionNotifications { qproperty-icon: url("./Norden - Black/icons/problems.svg"); }
+#actionUpdate { qproperty-icon: url("./Norden - Black/icons/actionUpdate.png"); }
+#actionHelp { qproperty-icon: url("./Norden - Black/icons/actionHelp.png"); }
+
+#refreshButton, #btnRefreshData, #dataTabRefresh, #btnRefreshDownloads, #refresh {
+  qproperty-icon: url("./Norden - Black/icons/action_Refresh.png"); icon-size: 18px; }
+#visitNexus { qproperty-icon: url("./Norden - Black/icons/actionNexus.png"); }
+#endorse { qproperty-icon: url("./Norden - Black/icons/actionEndorseMO.png"); icon-size: 18px; }
+#listOptionsBtn { qproperty-icon: url("./Norden - Black/icons/dots.svg"); }
+#openFolderMenu { qproperty-icon: url("./Norden - Black/icons/folder.svg"); icon-size: 18px; }
+#restoreModsButton, #restoreButton { qproperty-icon: url("./Norden - Black/icons/restore.svg"); icon-size: 18px; }
+#saveModsButton, #saveButton { qproperty-icon: url("./Norden - Black/icons/backup.svg"); icon-size: 18px; }
+#clearFiltersButton { qproperty-icon: url("./Norden - Black/icons/cross.svg"); }
+#bossButton { qproperty-icon: url("./Norden - Black/icons/sort.svg"); icon-size: 18px; }
+#clearCacheButton, #revokeNexusAuthButton, #nexusDisconnect { qproperty-icon: url("./Norden - Black/icons/cross.svg"); icon-size: 18px; }
+#deactivateESP { qproperty-icon: url("./Norden - Black/icons/minus.svg"); }
+#activateESP { qproperty-icon: url("./Norden - Black/icons/plus.svg"); }
+#startButton { qproperty-icon: url("./Norden - Black/icons/play.svg"); }
+#linkButton { qproperty-icon: url("./Norden - Black/icons/shortcut.svg"); icon-size: 18px; }
+#track { qproperty-icon: url("./Norden - Black/icons/pin.svg"); }
